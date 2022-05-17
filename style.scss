@@ -1,0 +1,300 @@
+/*
+  Theme Name:   Hacklab Mikkeli
+  Theme URI:    
+  Description:  Hacklab Mikkeli theme
+  Author:       Hacklab Mikkeli
+  Author URI:   https://hacklabmikkeli.fi
+  Template:     twentytwenty
+  Version:      1.0.0
+  License:      GNU Affero General Public License v3
+  License URI:  https://www.gnu.org/licenses/agpl-3.0.en.html
+  Text Domain:  hacklab
+*/
+
+@import "theme";
+@import "fonts";
+@import "original";
+
+/* Put all custom styles below */
+
+/* MAKE SURE YOU HAVE SCSS COMPILE RUNNING */
+/* npx node-sass -w style.scss -o . */
+
+/* TwentyTwenty overrides: */
+
+body {
+	font-family: $font-text;
+	background: $color-body;
+}
+
+.singular .entry-header {
+  padding: 0
+}
+
+.site-main {
+	& a {
+		color: $color-primary;
+	}
+}
+
+h1, h2, h3 {
+	font-family: $font-header;
+	font-weight: normal;
+}
+
+h4, h5, h6 {
+	font-family: $font-text-header;
+	font-weight: normal;
+}
+
+.entry-content {
+  font-family: $font-text;
+  & h1, h2, h3 {
+    font-family: $font-header;
+    font-weight: normal;
+  }
+  & h4, h5, h6 {
+    font-family: $font-text-header;
+    font-weight: normal;
+  }
+}
+
+.entry-title {
+	font-family: $font-header;
+}
+
+article.page {
+	background-color: $color-surface;
+}
+
+/* Other custom styles */
+
+h1.entry-title {
+	padding-top: 2rem;
+	@media (min-width: 768px) {
+		padding-top: 6rem;
+		padding-bottom: 2rem;
+	}
+	&:empty {
+		display: none;
+	}
+}
+
+.spacer {
+	display: none;
+	@media (min-width: 768px) {
+		display: block;
+	}
+}
+
+.front-page {
+  overflow: visible;
+	padding-bottom: 50px;
+	background-color: $color-body;
+	& article.page {
+		background-color: $color-body;
+	}
+}
+
+.inner-page {
+	padding: 0;
+	@media (min-width: 500px) {
+		padding: 15px
+	}
+	@media (min-width: 768px) {
+		padding: 50px
+	}
+}
+
+.template-full-width .inner-page {
+	padding: 0
+}
+
+.top-bar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	left: 0,;
+	right: 0;
+	z-index: 1000;
+	background-color: rgba(25, 25, 25, 0.6);
+	display: flex;
+	justify-content: flex-end;
+}
+
+.site-inner {
+	height: 45vh;
+	@media (min-width: 768px) {
+		height: auto;
+	}
+	margin: 0 auto;
+  position: relative;
+	max-width: none;
+	& header {
+		height: 100%;
+	}
+}
+
+.header-logo {
+  position: absolute;
+	top: 60%;
+	left: 50%;
+	width: 80%;
+	@media (min-width: 768px) {
+		top: 50%;
+		width: 30%;
+	}
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+.header-image,
+img.header-image {
+  width: 100%;
+  object-fit: none;
+	height: 100%;
+	@media (min-width: 768px) {
+		object-fit: cover;
+	}
+}
+
+.text-area {
+	background-color: #0D0D0D;
+	height: 90%;
+	text-align: center;
+	padding: 3% 28% 4% 28%;
+	width: 100%;
+}
+
+.text-area-header {
+	font-family: $font-text-header;
+	letter-spacing: 0px;
+	color: $color-primary;
+	font-size: 20px;
+}
+
+.text-area-content {
+	font-family: $font-text;
+	letter-spacing: 0px;
+	color: #E2E2E2;
+	font-size: 10px;
+}
+
+.header-image a {
+	display: block;
+}
+
+.site-menu {
+	position: relative;
+	text-align: center;
+}
+
+.menu-item {
+	font-family: $font-text-header;
+	letter-spacing: 0px;
+	color: #FFFFFF;
+	font-size: 30px;
+	position: absolute;
+}
+
+/**
+ * 11.6 - Footer
+ */
+
+.site-footer {
+	background-color: #161616;
+}
+
+.footer-logo {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 25px 0 25px 0;
+	background-color: #161616;
+	& p {
+		margin: 0;
+		text-align: center;
+		font-family: $font-text;
+		color: $color-text-light;
+	}
+	& a {
+		color: $color-text-light;
+		font-family: $font-text;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.footer-logo-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-image {
+	margin-bottom: 41px;
+}
+
+.footer-info {
+	padding: 25px 0 50px 0;
+	width: 100%;
+	text-align: center;
+	color: $color-primary;
+	& p {
+		margin: 0;
+		color: $color-text-light;
+	}
+}
+
+.footer-info a, .footer-info a:hover, .footer-info a:visited {
+	color: $color-primary;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.font-roboto-light {
+	font-family: Roboto_light;
+}
+
+.font-roboto-bold {
+	font-family: Roboto_bold;
+}
+
+.site-info {
+	color: #686868;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	line-height: 1.6153846154;
+}
+
+.site-info a {
+	color: #686868;
+}
+
+.site-info a:hover,
+.site-info a:focus {
+	color: #007acc;
+}
+
+.site-footer .site-title {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: 400;
+}
+
+.site-footer .site-title:after {
+	content: "\002f";
+	display: inline-block;
+	font-family: Montserrat, sans-serif;
+	opacity: 0.7;
+}
+
+.site-footer span[role=separator] {
+	font-family: Montserrat, sans-serif;
+	opacity: 0.7;
+}
+
+.site-footer span[role=separator]::before {
+	content: '\002f';
+}
