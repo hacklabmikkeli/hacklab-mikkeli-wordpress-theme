@@ -28,7 +28,13 @@ body {
 }
 
 .singular .entry-header {
-  padding: 0
+  padding: 0;
+	position: absolute;
+	z-index: 1000;
+	top: 208px;
+	&.header-footer-group {
+		background-color: transparent;
+	}
 }
 
 .site-main {
@@ -59,12 +65,36 @@ h4, h5, h6 {
   }
 }
 
+// Page hero
+.entry-content > .alignfull:not(.wp-block-group.has-background) {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.entry-content {
+	& .wp-block–group {
+		max-width: 65ch;
+	}
+	& .wp-block-group__inner-container {
+		max-width: 65ch;
+	}
+}
+
 .entry-title {
 	font-family: $font-header;
+	white-space: nowrap;
+}
+
+.post-inner {
+	padding: 0
 }
 
 article.page {
 	background-color: $color-surface;
+}
+
+.front-page article.page {
+	position: relative
 }
 
 /* Other custom styles */
@@ -133,6 +163,15 @@ h1.entry-title {
 	& header {
 		height: 100%;
 	}
+}
+
+#site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.8) !important;
+	z-index: 1200;
 }
 
 .header-logo {
