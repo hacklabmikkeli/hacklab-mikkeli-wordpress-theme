@@ -17,7 +17,7 @@
 					<div class="footer-logo-content">
 						<img width="200" class="footer-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/hacklab-logo.svg" alt="hacklab mikkeli footer logo" />
 						<p>&copy; Hacklab Mikkeli</p>
-						<p>versio 1.0.1</p>
+						<p>versio 1.0.2</p>
 					</div>
 				</div>
 			</footer><!-- .site-footer -->
