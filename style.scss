@@ -32,8 +32,17 @@ body {
 	position: absolute;
 	z-index: 1000;
 	top: 208px;
+	& .section-inner.medium {
+		max-width: 100%;
+	};
 	&.header-footer-group {
 		background-color: transparent;
+	};
+	@media (max-width: 768px) {
+		top: 80px;
+		left: 18px;
+		right: 18px;
+		max-width: 100%;
 	}
 }
 
@@ -82,7 +91,7 @@ h4, h5, h6 {
 
 .entry-title {
 	font-family: $font-header;
-	white-space: nowrap;
+	text-align: left;
 }
 
 .post-inner {
@@ -101,6 +110,7 @@ article.page {
 
 h1.entry-title {
 	padding-top: 2rem;
+	color: $color-body;
 	@media (min-width: 768px) {
 		padding-top: 6rem;
 		padding-bottom: 2rem;
@@ -174,6 +184,15 @@ h1.entry-title {
 	z-index: 1200;
 }
 
+.header-inner {
+  max-width: 168rem;
+  padding: 1.15rem 0;
+  z-index: 100;
+	@media (min-width: 768px) {
+		padding: 3.15rem 0;
+	}
+}
+
 .header-logo {
   position: absolute;
 	top: 60%;
@@ -187,6 +206,12 @@ h1.entry-title {
   transform: translate(-50%, -50%);
 }
 
+.nav-toggle .toggle-icon, .nav-toggle svg {
+  height: 0.8rem;
+  width: 2.6rem;
+  color: #fff;
+}
+
 .header-image,
 img.header-image {
   width: 100%;
@@ -195,6 +220,10 @@ img.header-image {
 	@media (min-width: 768px) {
 		object-fit: cover;
 	}
+}
+
+.menu-modal {
+	z-index: 2000;
 }
 
 .text-area {

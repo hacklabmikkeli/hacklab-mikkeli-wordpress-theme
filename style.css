@@ -4616,8 +4616,16 @@ body {
   position: absolute;
   z-index: 1000;
   top: 208px; }
+  .singular .entry-header .section-inner.medium {
+    max-width: 100%; }
   .singular .entry-header.header-footer-group {
     background-color: transparent; }
+  @media (max-width: 768px) {
+    .singular .entry-header {
+      top: 80px;
+      left: 18px;
+      right: 18px;
+      max-width: 100%; } }
 
 .site-main a {
   color: #ff1d96; }
@@ -4651,7 +4659,7 @@ h4, h5, h6 {
 
 .entry-title {
   font-family: "Montserrat_black";
-  white-space: nowrap; }
+  text-align: left; }
 
 .post-inner {
   padding: 0; }
@@ -4664,7 +4672,8 @@ article.page {
 
 /* Other custom styles */
 h1.entry-title {
-  padding-top: 2rem; }
+  padding-top: 2rem;
+  color: #F2F2F2; }
   @media (min-width: 768px) {
     h1.entry-title {
       padding-top: 6rem;
@@ -4727,6 +4736,14 @@ h1.entry-title {
   background-color: rgba(0, 0, 0, 0.8) !important;
   z-index: 1200; }
 
+.header-inner {
+  max-width: 168rem;
+  padding: 1.15rem 0;
+  z-index: 100; }
+  @media (min-width: 768px) {
+    .header-inner {
+      padding: 3.15rem 0; } }
+
 .header-logo {
   position: absolute;
   top: 60%;
@@ -4739,6 +4756,11 @@ h1.entry-title {
       top: 50%;
       width: 30%; } }
 
+.nav-toggle .toggle-icon, .nav-toggle svg {
+  height: 0.8rem;
+  width: 2.6rem;
+  color: #fff; }
+
 .header-image,
 img.header-image {
   width: 100%;
@@ -4748,6 +4770,9 @@ img.header-image {
     .header-image,
     img.header-image {
       object-fit: cover; } }
+
+.menu-modal {
+  z-index: 2000; }
 
 .text-area {
   background-color: #0D0D0D;
